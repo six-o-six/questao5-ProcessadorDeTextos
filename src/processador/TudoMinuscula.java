@@ -1,26 +1,11 @@
 package processador;
 
-public class TudoMinuscula {
-	
-	public static String converterTextoEmMinusculo(String entrada) {
-		char[] caracteres = extrairCaracteres(entrada);
-		char[] caracateresAgoraMinusculos = converterCaracteresEmMinusculo(caracteres);
-		String resultado = juntarCaractaresAgoraMinusculo(caracateresAgoraMinusculos);
-		return resultado;
-	}
-	
-	private static String juntarCaractaresAgoraMinusculo(char[] chars) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	private static char[] converterCaracteresEmMinusculo(char[] chars) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	private static char[] extrairCaracteres(String texto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+public class TudoMinuscula extends ProcessadorTexto {
+    protected char[] converterCaracteres(char[] chars) {
+        char[] resultado = new char[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            resultado[i] = Character.toLowerCase(chars[i]);
+        }
+        return resultado;
+    }
 }
